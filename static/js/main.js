@@ -1,0 +1,16 @@
+jQuery(document).ready(function () {
+  jQuery(window).scroll(function () {
+    if (jQuery(this).scrollTop() > 100) {
+      jQuery("#scroll").fadeIn();
+    } else {
+      jQuery("#scroll").fadeOut();
+    }
+  });
+
+  jQuery("#scroll").click(function () {
+    jQuery("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+  });
+
+  jQuery("#memberModal").modal("show");
+});
